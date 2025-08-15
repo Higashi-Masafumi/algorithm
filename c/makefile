@@ -69,6 +69,8 @@ merge_sort:
 heap_sort: libs
 	$(CC) $(CFLAGS) -o bin/heap_sort $(SRC_DIR)/sort/heap_sort.c -L$(LIB_DIR) -lheap -lutils
 
+kmp:
+	$(CC) -o bin/kmp $(SRC_DIR)/string_search/kmp.c $(SRC_DIR)/utils/random_sequence.c
 clean:
 	rm -f bin/* lib/*
 
