@@ -26,3 +26,32 @@ void random_sequence(int *arr, int length) {
         arr[j] = temp;
     }
 }
+
+/**
+ * ソート済みのランダムな整数配列を生成する
+ * binary_searchなどのテスト用途向け
+ * 
+ * @param arr 生成された整数配列
+ * @param length 生成する配列の長さ
+ * @param min_val 最小値
+ * @param max_val 最大値
+ */
+void sorted_random_array(int *arr, int length, int min_val, int max_val) {
+    if (length <= 0) return;
+    
+    srand(time(0));
+    
+    for (int i = 0; i < length; i++) {
+        arr[i] = min_val + rand() % (max_val - min_val + 1);
+    }
+    
+    for (int i = 0; i < length - 1; i++) {
+        for (int j = i + 1; j < length; j++) {
+            if (arr[i] > arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}

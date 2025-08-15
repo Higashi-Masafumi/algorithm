@@ -1,6 +1,6 @@
-def main():
-    print("Hello from python!")
+def main(message: str):
+    print(message)
 
 
 if __name__ == "__main__":
-    main()
+    main("Hello from python!")

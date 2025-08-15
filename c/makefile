@@ -30,5 +30,14 @@ deque:
 heap:
 	$(CC) -o bin/heap $(SRC_DIR)/data_structure/heap.c
 
+binary_search:
+	$(CC) -o bin/binary_search $(SRC_DIR)/search/binary_search.c $(SRC_DIR)/utils/random_sequence.c
+
+binary_tree:
+	$(CC) -o bin/binary_tree $(SRC_DIR)/search/binary_tree.c $(SRC_DIR)/utils/random_sequence.c
+
+treap:
+	$(CC) -o bin/treap $(SRC_DIR)/search/treap.c $(SRC_DIR)/utils/random_sequence.c
+
 clean:
 	rm -f bin/*
