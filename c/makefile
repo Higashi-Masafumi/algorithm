@@ -18,5 +18,17 @@ sieve:
 spf:
 	$(CC) -o bin/spf $(SRC_DIR)/prime_factorization/spf.c $(SRC_DIR)/utils/random_number.c
 
+stack:
+	$(CC) -o bin/stack $(SRC_DIR)/stack/stack.c
+
+queue:
+	$(CC) -o bin/queue $(SRC_DIR)/data_structure/queue.c
+
+deque:
+	$(CC) -o bin/deque $(SRC_DIR)/data_structure/deque.c
+
+heap:
+	$(CC) -o bin/heap $(SRC_DIR)/data_structure/heap.c
+
 clean:
 	rm -f bin/*

@@ -2,6 +2,6 @@
 #include <time.h>
 
 int random_number() {
-    srand(time(NULL));
+    srand(time(0));
     return rand() % 1000 + 1;
 }
