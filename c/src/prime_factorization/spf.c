@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "../../include/utils.h"
 
 /**
  * 最小素因数（Smallest Prime Factor）を計算する
@@ -47,7 +48,8 @@ void prime_factorization(int n, int *spf) {
 }
 
 int main() {
-    int n = 100;
+    int n = random_number();
+    printf("n: %d\n", n);
     int *spf = (int *)malloc((n+1) * sizeof(int));
     if (spf == NULL) {
         printf("メモリ割り当てに失敗しました\n");

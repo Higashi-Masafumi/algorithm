@@ -16,7 +16,7 @@ sieve:
 	$(CC) -o sieve $(SRC_DIR)/eratosthenes/sieve.c
 
 spf:
-	$(CC) -o spf $(SRC_DIR)/prime_factorization/spf.c
+	$(CC) -o spf $(SRC_DIR)/prime_factorization/spf.c $(SRC_DIR)/utils/random_number.c
 
 clean:
 	rm -f twopointer_naive
