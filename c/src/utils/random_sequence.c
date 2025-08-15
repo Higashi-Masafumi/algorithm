@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../../include/random_sequence.h"
+#include "../../include/utils.h"
 
 /**
  * ランダムな整数列を生成する

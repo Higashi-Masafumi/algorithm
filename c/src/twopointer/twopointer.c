@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../../include/random_sequence.h"
+#include "../../include/utils.h"
 
 /**
  * スライディングウィンドウを使って最大部分配列の和を求める

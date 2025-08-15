@@ -9,5 +9,10 @@ twopointer_naive:
 twopointer:
 	$(CC) -o twopointer $(SRC_DIR)/twopointer/twopointer.c $(SRC_DIR)/utils/random_sequence.c
 
+euclid:
+	$(CC) -o euclid $(SRC_DIR)/euculid/euclid.c $(SRC_DIR)/utils/two_number.c
+
 clean:
 	rm -f twopointer_naive
+	rm -f twopointer
+	rm -f euclid

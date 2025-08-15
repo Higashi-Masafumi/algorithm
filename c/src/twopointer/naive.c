@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../../include/random_sequence.h"
+#include "../../include/utils.h"
 
 
 int find_max_subarray_naive(int *arr, int n, int m, int *start_index) {
