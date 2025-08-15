@@ -12,7 +12,11 @@ twopointer:
 euclid:
 	$(CC) -o euclid $(SRC_DIR)/euculid/euclid.c $(SRC_DIR)/utils/two_number.c
 
+sieve:
+	$(CC) -o sieve $(SRC_DIR)/eratosthenes/sieve.c
+
 clean:
 	rm -f twopointer_naive
 	rm -f twopointer
-	rm -f euclid
+	rm -f euculid
+	rm -f sieve
