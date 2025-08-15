@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "../../include/random_sequence.h"
 
 
@@ -30,28 +31,23 @@ int find_max_subarray_naive(int *arr, int n, int m, int *start_index) {
 }
 
 int main() {
-    int n = 10;
-    int m = 3;
+    int n = 1000000;
+    int m = 100;
     int *arr = (int*)malloc(n * sizeof(int));
     int start_index;
-    
+    clock_t start, end;
+    double cpu_time_used;
+
     random_sequence(arr, n);
-    
+
+    start = clock();
     int max_sum = find_max_subarray_naive(arr, n, m, &start_index);
-    
-    printf("M: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-    
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+
+    printf("Time taken: %f seconds\n", cpu_time_used);
     printf("max_sum: %d\n", max_sum);
     printf("start_index: %d\n", start_index);
-    printf("M: ");
-    for (int i = start_index; i < start_index + m; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
     
     free(arr);
     return 0;
