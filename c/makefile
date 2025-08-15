@@ -15,8 +15,12 @@ euclid:
 sieve:
 	$(CC) -o sieve $(SRC_DIR)/eratosthenes/sieve.c
 
+spf:
+	$(CC) -o spf $(SRC_DIR)/prime_factorization/spf.c
+
 clean:
 	rm -f twopointer_naive
 	rm -f twopointer
 	rm -f euculid
 	rm -f sieve
+	rm -f spf

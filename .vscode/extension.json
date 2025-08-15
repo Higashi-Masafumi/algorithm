@@ -1,0 +1,8 @@
+{
+    "extensions": {
+        "ms-vscode.cpptools": {
+            "default.cStandard": "c11",
+            "default.cppStandard": "c++17"
+        }
+    }
+}
