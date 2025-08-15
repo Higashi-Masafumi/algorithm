@@ -1,0 +1,28 @@
+{
+  "python.defaultInterpreterPath": "python/.venv/bin/python",
+  "C_Cpp.default.compilerPath": "/usr/bin/clang",
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/c/include",
+    "${workspaceFolder}/c/src",
+    "${workspaceFolder}/c/src/utils",
+    "${workspaceFolder}/c/src/twopointer"
+  ],
+  "C_Cpp.default.defines": [],
+  "C_Cpp.default.browse.path": [
+    "${workspaceFolder}/c/include",
+    "${workspaceFolder}/c/src"
+  ],
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.autocomplete": "default",
+  "C_Cpp.suggestSnippets": true,
+  "C_Cpp.enhancedColorization": "enabled",
+  "C_Cpp.autoAddFileAssociations": true,
+  "C_Cpp.default.windowsSdkVersion": "",
+  "C_Cpp.default.macFrameworkPath": [
+    "/System/Library/Frameworks",
+    "/Library/Frameworks"
+  ]
+}
