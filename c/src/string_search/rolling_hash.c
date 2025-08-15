@@ -30,6 +30,11 @@ int rolling_hash_search(char* text, char* pattern) {
         return 0;
     }
     
+    /*
+    パターンのハッシュ値を計算
+    テキストのハッシュ値を計算
+    ハッシュ値を更新するためのhを計算
+    */
     unsigned long long pattern_hash = compute_hash(pattern, m);
     unsigned long long text_hash = compute_hash(text, m);
     unsigned long long h = power(BASE, m - 1, MOD);
