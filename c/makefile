@@ -1,7 +1,19 @@
 CC = gcc
+CFLAGS = -I$(INCLUDE_DIR)
 SRC_DIR = src
 INCLUDE_DIR = include
 LIB_DIR = lib
+
+# Create directories
+$(shell mkdir -p bin lib)
+
+# Build libraries directly
+libs:
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/data_structure/heap.c -o heap.o
+	ar rcs $(LIB_DIR)/libheap.a heap.o
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/utils/random_sequence.c -o utils.o
+	ar rcs $(LIB_DIR)/libutils.a utils.o
+	rm -f *.o
 
 twopointer_naive:
 	$(CC) -o bin/twopointer_naive $(SRC_DIR)/twopointer/naive.c $(SRC_DIR)/utils/random_sequence.c
@@ -39,5 +51,25 @@ binary_tree:
 treap:
 	$(CC) -o bin/treap $(SRC_DIR)/search/treap.c $(SRC_DIR)/utils/random_sequence.c
 
+insertion_sort:
+	$(CC) -o bin/insertion_sort $(SRC_DIR)/sort/insertion_sort.c $(SRC_DIR)/utils/random_sequence.c
+
+binary_insertion_sort:
+	$(CC) -o bin/binary_insertion_sort $(SRC_DIR)/sort/binary_insertion_sort.c $(SRC_DIR)/utils/random_sequence.c
+
+bubble_sort:
+	$(CC) -o bin/bubble_sort $(SRC_DIR)/sort/bubble_sort.c $(SRC_DIR)/utils/random_sequence.c
+
+quick_sort:
+	$(CC) -o bin/quick_sort $(SRC_DIR)/sort/quick_sort.c $(SRC_DIR)/utils/random_sequence.c
+
+merge_sort:
+	$(CC) -o bin/merge_sort $(SRC_DIR)/sort/merge_sort.c $(SRC_DIR)/utils/random_sequence.c
+
+heap_sort: libs
+	$(CC) $(CFLAGS) -o bin/heap_sort $(SRC_DIR)/sort/heap_sort.c -L$(LIB_DIR) -lheap -lutils
+
 clean:
-	rm -f bin/*
+	rm -f bin/* lib/*
+
+.PHONY: libs clean

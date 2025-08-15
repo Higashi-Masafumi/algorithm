@@ -189,6 +189,10 @@ int main() {
     int n = sizeof(values) / sizeof(values[0]);
     
     printf("Inserting values: ");
+    /*
+    ノード数がiの時、挿入に要する計算量はO(log i)
+    つまりノード数がnの時合計で挿入にかかる計算量はO(log 1 + log 2 + ... + log n) = O(log (1 * 2 * ... * n)) = O(log n!) ≒ O(n log n)
+    */
     for (int i = 0; i < n; i++) {
         printf("%d ", values[i]);
         root = insert(root, values[i]);

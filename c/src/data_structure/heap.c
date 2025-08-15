@@ -243,33 +243,3 @@ void heap_print_tree(MaxHeap* heap) {
     }
 }
 
-int main() {
-    MaxHeap* heap = heap_create(10);
-    
-    int values[] = {10, 20, 15, 30, 40, 50, 25};
-    int n = sizeof(values) / sizeof(values[0]);
-    
-    printf("Inserting values: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", values[i]);
-        heap_insert(heap, values[i]);
-    }
-    printf("\n\n");
-    
-    heap_print(heap);
-    heap_print_tree(heap);
-    
-    printf("\nPeek (max): %d\n", heap_peek(heap));
-    printf("Size: %d\n", heap_size(heap));
-    
-    printf("\nExtracting elements:\n");
-    while (!heap_is_empty(heap)) {
-        printf("Extracted: %d\n", heap_extract_max(heap));
-        if (!heap_is_empty(heap)) {
-            heap_print(heap);
-        }
-    }
-    
-    heap_destroy(heap);
-    return 0;
-}
