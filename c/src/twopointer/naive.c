@@ -8,7 +8,8 @@ int find_max_subarray_naive(int *arr, int n, int m, int *start_index) {
     int max_sum = 0;
     int best_start = 0;
     
-    for (int i = 0; i < n; i++) {
+    // 最初の部分配列の和で初期化
+    for (int i = 0; i < m; i++) {
         max_sum += arr[i];
     }
     best_start = 0;
