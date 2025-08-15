@@ -71,6 +71,10 @@ heap_sort: libs
 
 kmp:
 	$(CC) -o bin/kmp $(SRC_DIR)/string_search/kmp.c $(SRC_DIR)/utils/random_sequence.c
+
+rolling_hash:
+	$(CC) -o bin/rolling_hash $(SRC_DIR)/string_search/rolling_hash.c $(SRC_DIR)/utils/random_sequence.c
+
 clean:
 	rm -f bin/* lib/*
 
